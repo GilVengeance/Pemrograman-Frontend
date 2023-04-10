@@ -124,7 +124,7 @@ function AddMovieForm(props) {
                                 onChange={handlePoster}
                             />
 
-                            {isDateError && <Alert>Date Wajib Diisi</Alert>}
+                            {isPosterError && <Alert>Link Wajib Diisi</Alert>}
                         </div>
                         <div className={styles.form__group}>
                             <label htmlFor="genre" className={styles.form__label}>
@@ -137,7 +137,7 @@ function AddMovieForm(props) {
                                 <option value="Romance">Romance</option>
                             </select>
 
-                            {isDateError && <Alert>Date Wajib Diisi</Alert>}
+                            {isGenreError && <Alert>Genre Wajib Diisi</Alert>}
                         </div>
                         <div>
                             <button className={styles.form__button}>Add Movie</button>
