@@ -131,6 +131,7 @@ function AddMovieForm(props) {
                                 Genre
                             </label>
                             <select name="" id="" onChange={handleGenre} value={type} className={styles.form__input}>
+                                <option value="" disabled selected>Select Your Option</option>
                                 <option value="Action">Action</option>
                                 <option value="Comedy">Comedy</option>
                                 <option value="Romance">Romance</option>
