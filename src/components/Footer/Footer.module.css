@@ -1,0 +1,31 @@
+/* small screen */
+.container {
+  background-color: #6096B4;
+  padding: 1rem;
+  color: white;
+  text-align: center;
+}
+
+.footer__brand {
+  margin-bottom: 3rem;
+  padding-left: 122px;
+}
+
+/* medium sreen */
+@media (min-width: 768px) {
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+
+  .footer__brand {
+    margin: 0;
+  }
+}
+
+/* large screen */
+@media (min-width: 992px) {
+}

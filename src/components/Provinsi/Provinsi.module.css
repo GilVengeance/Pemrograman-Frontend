@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.provinsi__title {
+  font-size: 2.441rem;
+  color: #93BFCF;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.provinsi__caption {
+  color: #93BFCF;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  font-size: 1.59rem;
+  text-align: center;
+}
+
+.provinsi__table {
+  width: 600px;
+}
+
+th,
+td {
+  border: 2px solid #6096B4;
+  padding: 1rem;
+}
+
+/* Large Screen */
+@media (min-width: 768px) {
+  .provinsi__table {
+    width: 100%;
+  }
+}
+
+/* Large Screen */
+@media (min-width: 992px) {
+  .provinsi__table {
+    width: 900px;
+  }
+}

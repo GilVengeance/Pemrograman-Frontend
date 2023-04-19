@@ -1,0 +1,25 @@
+/* small screen */
+.list {
+  list-style: none;
+  margin-right: 122px;
+}
+
+.item {
+  margin-bottom: 1rem;
+}
+
+/* medium sreen */
+@media (min-width: 768px) {
+  .list {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .item {
+    margin: 0 1rem;
+  }
+}
+
+/* large screen */
+@media (min-width: 992px) {
+}
