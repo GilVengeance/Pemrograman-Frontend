@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import StyledMovie from "./Movie.styled";
 
 // Component Movie menerima props
@@ -13,8 +14,10 @@ function Movie(props) {
         }
         alt={movie.title}
       />
-      <h3>{movie.title}</h3>
-      <p className="movie__date ">{movie.year || movie.release_date.substring(0,4)}</p>
+      <Link to={`/movie/${movie.id}`}>
+        <h3>{movie.title}</h3>
+      </Link>
+      <p className="movie__date ">{movie.year || movie.release_date.substring(0, 4)}</p>
     </StyledMovie>
   );
 }
