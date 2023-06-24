@@ -30,7 +30,6 @@ function Hero() {
     // Mendapatkan 1 data dari trending movies
     async function getTrendingMovies() {
         const response = await axios(ENDPOINTS.TRENDING);
-        console.log(response.data.results[0]);
         return response.data.results[0];
     }
 
@@ -41,7 +40,6 @@ function Hero() {
         const id = trendingMovie.id;
         // fetch detail movie by id
         const response = await axios(ENDPOINTS.DETAIL(id));
-        console.log(response.data);
 
         setMovie(response.data);
     }

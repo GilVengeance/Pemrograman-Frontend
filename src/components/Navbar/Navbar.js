@@ -6,7 +6,9 @@ function Navbar() {
         <StyledNavbar>
             <nav>
                 <div>
-                    <h1>Movie App</h1>
+                    <Link to="/">
+                        <h1>Movie App</h1>
+                    </Link>
                 </div>
                 <div>
                     <ul>

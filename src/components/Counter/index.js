@@ -9,14 +9,12 @@ function Counter() {
 
     // useEffect
     function updateDOM() {
-        console.log("Lifecycle: Dimount");
 
         document.title = `Hasil: ${angka}`;
     }
 
     useEffect(updateDOM, [angka]);
 
-    console.log("Lifecycle: Dirender");
 
     return (
         <div>

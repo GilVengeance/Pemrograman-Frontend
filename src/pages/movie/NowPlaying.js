@@ -1,12 +1,15 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import Movies from "../../components/Movies/Movies";
 import Hero from "../../components/Hero/Hero";
 import ENDPOINTS from "../../utils/constants/endpoints";
+import { useDispatch } from "react-redux";
+import { updateMovies } from "../../features/moviesSlice/moviesSlice";
 
 function NowPlaying() {
 
-    const [movies, setMovies] = useState([]);
+    const dispatch = useDispatch();
 
     useEffect(() => {
         getNowPlaying();
@@ -14,14 +17,13 @@ function NowPlaying() {
 
     async function getNowPlaying() {
         const response = await axios(ENDPOINTS.NOWPLAYING);
-        setMovies(response.data.results);
+        dispatch(updateMovies(response.data.results));
     }
-    console.log(movies);
 
     return (
         <div>
             <Hero />
-            <Movies title="Now Playing" movies={movies} />
+            <Movies title="Now Playing" />
         </div>
     )
 }
